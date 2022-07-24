@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应收款登记</title>
+    <link rel="stylesheet" href="../../component/pear/css/pear.css" />
+    <link rel="stylesheet" href="../../component/layui/css/layui.css" />
+
+    <style type="text/css">
+        body {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body background="../../admin/images/background.svg" style="background-size: cover;background-repeat: no-repeat;">
+    <div class="layui-card-body" style="padding-top: 70px;">
+        <form class="layui-form" action="">
+           
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="float: left;width: 40%;">商品编号：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" style="width: 60%; text-align: right;">
+                </div>
+                <button class="pear-btn pear-btn-md pear-btn-primary" lay-submit lay-filter="user-query" >
+                    <i class="layui-icon layui-icon-search"></i>
+                    检索
+                </button>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="float: left;width: 40%;">交货日期：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM">
+                </div>
+                
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="float: left;width: 40%;">顾客编号：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" style="width: 60%; text-align: right;">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="float: left;width: 40%;">顾客名：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" style="width: 200%;">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="float: left;width: 40%; ">应收款余额：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" style="text-align: right;" >
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="float: left; width: 40%; ">应收款：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" style="text-align: right;" >
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="float: left;width: 40%; ">登记后应收款余额：</label>
+                <div class="layui-input-inline"  >
+                    <input type="text" class="layui-input" style="text-align: right;" >
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="float: left;width: 40%; text-align: right;"></label>
+                <button class="pear-btn pear-btn-md pear-btn-primary" lay-submit lay-filter="user-query" >
+                    
+                    清空
+                </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="layui-btn layui-btn-disabled" lay-submit lay-filter="user-query" >
+                  
+                    登记
+                </button>
+            </div>
+        </form>
+
+    </div>
+    <!-- 资 源 引 入 -->
+    <script src="../../component/layui/layui.js"></script>
+    <script src="../../component/pear/pear.js"></script>
+    <script>
+        layui.use(['table', 'dropdown', 'laydate'], function () {
+            var table = layui.table;
+            var dropdown = layui.dropdown;
+            var laydate = layui.laydate;
+
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDay();
+            var D = year + '-' + month + '-' + day;
+
+            laydate.render({
+                elem: '#test1'
+                , type: 'day'
+                , min: '2001-1-1'
+                , max: D
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

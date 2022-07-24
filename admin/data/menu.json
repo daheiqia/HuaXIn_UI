@@ -1,0 +1,152 @@
+[
+	{
+		"id": "order",
+		"title": "订单管理",
+		"icon": "layui-icon layui-icon-console",
+		"type": 0,
+		"href": "",
+		"children": [
+			{
+				"id": 101,
+				"title": "订单信息",
+				"icon": "layui-icon layui-icon-console",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			},
+			{
+				"id": 102,
+				"title": "商品出库",
+				"icon": "layui-icon layui-icon-console",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			},
+			{
+				"id": 103,
+				"title": "顾客订单月报",
+				"icon": "layui-icon layui-icon-console",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/order/customer.html"
+			},
+			{
+				"id": 104,
+				"title": "商品订单月报",
+				"icon": "layui-icon layui-icon-console",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/order/commodity.html"
+			},
+			{
+				"id": 105,
+				"title": "库存信息",
+				"icon": "layui-icon layui-icon-console",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/order/inventory.html"
+			}
+		]
+	},
+	{
+		"id": "receivable",
+		"title": "应收帐款管理",
+		"icon": "layui-icon layui-icon-component",
+		"type": 0,
+		"href": "",
+		"children": [
+			{
+				"id": 201,
+				"title": "应收款登记",
+				"icon": "layui-icon layui-icon-console",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/receivable/register.html"
+			},
+			{
+				"id": 202,
+				"title": "请求付款",
+				"icon": "layui-icon layui-icon-console",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			},
+			{
+				"id": 203,
+				"title": "到款登录",
+				"icon": "layui-icon layui-icon-console",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			}
+		]
+	},
+	{
+		"id": "purchase",
+		"title": "采购管理",
+		"icon": "layui-icon layui-icon-auz",
+		"type": 0,
+		"href": "",
+		"children": [
+			{
+				"id": "301",
+				"title": "采购单制作",
+				"icon": "layui-icon layui-icon-face-smile",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			},
+			{
+				"id": "302",
+				"title": "检品入库",
+				"icon": "layui-icon layui-icon-face-cry",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			}
+		]
+	},
+	{
+		"id": "account",
+		"title": "应付帐款管理",
+		"icon": "layui-icon layui-icon-face-cry",
+		"type": 0,
+		"href": "",
+		"children": [
+			{
+				"id": 401,
+				"title": "应付款登记",
+				"icon": "layui-icon layui-icon-face-smile",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			},
+			{
+				"id": 402,
+				"title": "付款发票制作",
+				"icon": "layui-icon layui-icon-face-cry",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			},
+			{
+				"id": 403,
+				"title": "付款登记",
+				"icon": "layui-icon layui-icon-face-cry",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/system/home.html"
+			}
+		]
+	},
+	{
+		"id": "message",
+		"title": "信息管理",
+		"icon": "layui-icon layui-icon-util",
+		"type": 0,
+		"href": "",
+		"children": [
+			{}
+		]
+	}
+]
