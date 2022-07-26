@@ -26,37 +26,27 @@ HuaXIn_UI
 ├─config 配置
 │    │
 │    ├─pear.config.yml 配置文件
-│    │
-│    └─pear.config.json 配置文件
+│    
+│ 
 │
 ├─view 视图
 │    │
-│    ├─console 首页
-│    │
-│    ├─document 文档
-│    │
-│    ├─echarts 图表
-│    │
-│    ├─error 错误页
-│    │
-│    ├─result 结果页
-│    │
-│    └─system 系统管理
+│    ├
 │    │
 │    ├─order  订单
 │    │    │    
-│    │    │--commodity.html  商品订单月报    
+│    │    │--PR1o4.html  商品订单月报    
 │    │    │    
-│    │    │--customer.html  顾客订单月报 
+│    │    │--PR103.html  顾客订单月报 
 │    │    │    
-│    │    │--inventory.html  库存信息
+│    │    │--PR1o5.html  库存信息
 │    │       
 │    │   
 │    │      
 │    │    
 │    ├─receivable 应收账款管理
 │    │    │  
-│    │    │-- register.html  应收款登记   
+│    │    │-- PR201.html  应收款登记   
 │    │      
 │    │      
 │    │    

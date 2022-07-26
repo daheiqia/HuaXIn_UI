@@ -28,7 +28,7 @@
 				"icon": "layui-icon layui-icon-console",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/order/customer.html"
+				"href": "view/order/PR103.html"
 			},
 			{
 				"id": 104,
@@ -36,7 +36,7 @@
 				"icon": "layui-icon layui-icon-console",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/order/commodity.html"
+				"href": "view/order/PR104.html"
 			},
 			{
 				"id": 105,
@@ -44,7 +44,7 @@
 				"icon": "layui-icon layui-icon-console",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/order/inventory.html"
+				"href": "view/order/PR105.html"
 			}
 		]
 	},
@@ -61,7 +61,7 @@
 				"icon": "layui-icon layui-icon-console",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/receivable/register.html"
+				"href": "view/receivable/PR201.html"
 			},
 			{
 				"id": 202,

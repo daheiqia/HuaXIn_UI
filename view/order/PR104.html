@@ -47,7 +47,7 @@
 
 <script type="text/html" id="toolbarDemo">
     <div class="layui-btn-container">
-      <div class="layui-text" style="font-size: 30px;" > --月商品订单月报</div>
+      <div class="layui-text" style="font-size: 15px;" > --月商品订单月报</div>
     </div>
 </script>
    
@@ -106,9 +106,9 @@
                     }
                 }
                 , {
-                    field: 'experience', title: '订单金额合计(元)', align: 'center', sort: true, totalRow: '{{= d.TOTAL_NUMS }} 😊', templet: function (d) {
+                    field: 'experience', title: '订单金额合计(元)', align: 'center', sort: true, templet: function (d) {
                         return '<div style="text-align: right">' + d.experience + '</div>'
-                    }
+                    },totalRow: '{{= d.TOTAL_NUMS }} 😊', 
                 }
             ]]
             , done: function () {
