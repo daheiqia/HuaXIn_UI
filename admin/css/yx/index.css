@@ -1,0 +1,40 @@
+
+/* 移动端 */
+@media screen and (max-width: 768px) {
+
+    .layui-layout-admin .layui-layout-left,
+    .layui-layout-admin .layui-body,
+    .layui-layout-admin .layui-footer {
+        left: 0;
+    }
+
+    .layui-layout-admin .layui-side {
+        left: -300px;
+    }
+}
+
+.layui-header {
+    /*height: 25%;*/
+}
+
+.layui-card-header {
+    line-height: 100px;
+    height: 600px;
+}
+
+#title {
+    padding: 100px 0 100px;
+    text-align: center;
+    /* float: none; */
+}
+
+
+#quit_btn {
+    /* margin: 0px 50%px 0px; */
+    text-align: center;
+    margin-left: 475px;
+
+    /* z-index: 3; */
+    /* float: right; */
+    /* margin: 0 auto; */
+}
