@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="admin/css/loader.css" />
 	<!-- 布 局 样 式 -->
 	<link rel="stylesheet" href="admin/css/admin.css" />
+	<!-- index页样式 -->
+	<link rel="stylesheet" href="admin/css/yx/index.css">
 </head>
 <!-- 结 构 代 码 -->
 
@@ -77,25 +79,65 @@
 		<!-- 视 图 页 面 -->
 		<div class="layui-body">
 			<!-- 内 容 页 面 -->
-			<div id="content"></div>
+			<!-- <div id="content"></div> -->
+			<!-- 内容主体区域 -->
+			<div style="padding: 15px;">
+
+
+				<div class="layui-card layui-panel">
+					<div class="layui-card-header "
+						style="margin: 0px; padding:0px;background-image:url(admin/images/background.svg);">
+
+						<!-- <h1 id="title">欢 迎 进 入 华 信 采 购 系 统</h1> -->
+						<!-- <img src="admin/images/background.svg" alt="图片不见了" style="background-size: cover;"> -->
+
+						<div class="layui-carousel" id="test10" style="left:30%">
+							<div carousel-item="" ">
+									<div>
+										<h1 id=" title" style=" font-style: normal; color: rgb(251, 251, 255); margin: 10px 200px; padding-top: 20px; position: absolute; z-index: 101;">
+								欢 迎 进 入 <br>华 信 采 购 系 统</h1>
+								<img src="admin\images\index1.jpg" alt="" style="position: absolute;z-index: 0;">
+							</div>
+							<div>
+								<!-- <div background="admin/images/index1.jpg" style="background-size: cover"></div> -->
+								<h1 id="title"
+									style=" font-style: normal; color: rgb(251, 251, 255); margin: 10px 200px; padding-top: 20px; position: absolute; z-index: 101;">
+									欢 迎 进 入 <br>华 信 采 购 系 统</h1>
+								<img src="admin\images\index1.jpg" alt="" style="position: absolute;z-index: 0;">
+							</div>
+							<div>
+								<!-- <div background="admin/images/index1.jpg" style="background-size: cover"></div> -->
+								<h1 id="title"
+									style=" font-style: normal; color: rgb(251, 251, 255); margin: 10px 200px; padding-top: 20px; position: absolute; z-index: 101;">
+									欢 迎 进 入 <br>华 信 采 购 系 统</h1>
+								<img src="admin\images\index1.jpg" alt="" style="position: absolute;z-index: 0;">
+							</div>
+						</div>
+					</div>
+					<br>
+					<a href="login.html" class="layui-btn layui-col-md5" id="quit_btn">安全退出</a>
+				</div>
+			</div>
 		</div>
-		<!-- 页脚 -->
-		<div class="layui-footer layui-text">
-			<span class="left">
-				Released under the MIT license.
-			</span>
-			<span class="center"></span>
-			<span class="right">
-				Copyright © 2021-2022 pearadmin.com
-			</span>
-		</div>
-		<!-- 遮 盖 层 -->
-		<div class="pear-cover"></div>
-		<!-- 加 载 动 画 -->
-		<div class="loader-main">
-			<!-- 动 画 对 象 -->
-			<div class="loader"></div>
-		</div>
+	</div>
+	</div>
+	<!-- 页脚 -->
+	<div class="layui-footer layui-text">
+		<span class="left">
+			Released under the MIT license.
+		</span>
+		<span class="center"></span>
+		<span class="right">
+			Copyright © 2021-2022 pearadmin.com
+		</span>
+	</div>
+	<!-- 遮 盖 层 -->
+	<div class="pear-cover"></div>
+	<!-- 加 载 动 画 -->
+	<div class="loader-main">
+		<!-- 动 画 对 象 -->
+		<div class="loader"></div>
+	</div>
 	</div>
 	<!-- 移 动 端 便 捷 操 作 -->
 	<div class="pear-collapsed-pe collapse">
@@ -106,14 +148,24 @@
 	<script src="component/pear/pear.js"></script>
 	<!-- 框 架 初 始 化 -->
 	<script>
-		layui.use(['admin', 'jquery', 'popup', 'drawer'], function () {
+		layui.use(['admin', 'jquery', 'popup', 'drawer', 'carousel'], function () {
 			var $ = layui.jquery;
 			var admin = layui.admin;
 			var popup = layui.popup;
+			//轮播图
+			var carousel = layui.carousel
 			// var date = new Date();
 			// var year = date.getFullYear();
 			// var month = date.getMonth();
-			
+
+			carousel.render({
+				elem: '#test10'
+				, width: '660px'
+				, height: '400px'
+				, interval: 4000
+			});
+
+
 			admin.setConfigType("yml");
 			admin.setConfigPath("config/pear.config.yml");
 
