@@ -69,14 +69,17 @@
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label" style="float: left;width: 40%; text-align: right;"></label>
-                <button class="pear-btn pear-btn-md pear-btn-primary" lay-submit lay-filter="user-query" >
+                <!-- <button class="pear-btn pear-btn-md pear-btn-primary" lay-submit lay-filter="user-query" >
                     
+                    清空
+                </button> -->
+                <button type="reset" class="pear-btn pear-btn-md pear-btn-primary">
                     清空
                 </button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button class="layui-btn layui-btn-disabled" lay-submit lay-filter="user-query" >
-                  
+
                     登记
                 </button>
             </div>
@@ -95,14 +98,13 @@
             var date = new Date();
             var year = date.getFullYear();
             var month = date.getMonth() + 1;
-            var day = date.getDay();
+            var day = date.getDate();
             var D = year + '-' + month + '-' + day;
-            console.log(d);
+            
             laydate.render({
                 elem: '#test1'
-                , type: 'day'
-                , min: '2001-1-1'
-                , max: D
+                ,min: '2017-1-1'
+                ,max: D
             });
 
 
