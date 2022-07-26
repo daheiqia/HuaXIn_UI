@@ -12,7 +12,7 @@
 				"icon": "layui-icon layui-icon-console",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/order/PR101_1.html"	
+				"href": "view/order/PR101_1.html"
 			},
 			{
 				"id": 102,
@@ -45,6 +45,14 @@
 				"type": 1,
 				"openType": "_iframe",
 				"href": "view/order/PR105.html"
+			},
+			{
+				"id": "30201",
+				"title": "检品入库",
+				"icon": "layui-icon layui-icon-face-cry",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "view/order/PR30201.html"
 			}
 		]
 	},
@@ -64,20 +72,20 @@
 				"href": "view/receivable/PR201.html"
 			},
 			{
-				"id": 202,
+				"id": 20201,
 				"title": "请求付款",
 				"icon": "layui-icon layui-icon-console",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/home.html"
+				"href": "view/receivable/PR20201.html"
 			},
 			{
-				"id": 203,
+				"id": 20301,
 				"title": "到款登录",
 				"icon": "layui-icon layui-icon-console",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/home.html"
+				"href": "view/receivable/PR20301.html"
 			}
 		]
 	},
@@ -89,20 +97,12 @@
 		"href": "",
 		"children": [
 			{
-				"id": "301",
+				"id": "30101",
 				"title": "采购单制作",
 				"icon": "layui-icon layui-icon-face-smile",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/home.html"
-			},
-			{
-				"id": "302",
-				"title": "检品入库",
-				"icon": "layui-icon layui-icon-face-cry",
-				"type": 1,
-				"openType": "_iframe",
-				"href": "view/system/home.html"
+				"href": "view/purchase/PR30101.html"
 			}
 		]
 	},

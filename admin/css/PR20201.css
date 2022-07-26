@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	color: orange;
+}
+p{
+	display: inline-block;
+}
+select option{
+	color: black;
+}
+.container {
+	width: 900px;
+	margin: auto;
+}
+
+.header {
+	background: linear-gradient(#c3c3c8 0%, #000000);
+	background-size: 100% 1px;
+	height: 80px;
+}
+
+.h2class {
+	display: inline-block;
+	color: white;
+	line-height: 80px;
+	padding-left: 15px;
+}
+
+.pclass {
+	display: inline-block;
+	line-height: 80px;
+	color: white;
+}
+
+.headerFooter {
+	height: 20px;
+	line-height: 20px;
+	background-color: black;
+	color: white;
+	font-size: 10px;
+}
+.timeChange{
+	display: inline-block;
+	padding-right: 20px;
+	float: right;
+}
+.bodyHeader{
+	height: 60px;
+}
+.bodyNav{
+	float: right;
+	color: orange;
+	padding-right:50px ;
+	display: inline-block;
+	font-size:15px ;
+	font-weight: 500;
+	line-height: 60px;
+}
+.userMessage{
+	position: absolute;
+	display: inline-block;
+	top: 10px;
+	left: 20px;
+	height: 40px;
+	clear: both;
+}
+.module{
+	margin-top: 8px;
+}
+#userName{
+	padding-left:8px ;
+}
+.functionDiv{
+	margin-top: 120px;
+	width: 500px;
+	margin:0 auto;
+}
+#toMake{
+	display: inline-block;
+	margin-left: 80px;
+}

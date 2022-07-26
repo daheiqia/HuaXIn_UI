@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/admin/js/jquery3.6.0.js" type="text/javascript"></script>
+    <script src="/component/layui/layui.js"></script>
+    <script src="/admin/js/PR30101.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/admin/css/PR20201.css" type="text/css">
+    <link rel="stylesheet" href="/admin/css/PR20202.css" type="text/css">
+    <link rel="stylesheet" href="/component/layui/css/layui.css" href="style.css">
+    <title>采购单制作</title>
+</head>
+
+<body>
+    <div class="layui-main">
+        <div class="layui-col-xs10" style="background-color: white ;height: 600px ;background-color: gainsboro;">
+            <div class=" layui-row layui-form" style="width: 600px;margin: auto ;">
+                <table class="layui-table ">
+                    <tr>
+                        <td style="width: 150px;">供应商编号：</td>
+                        <td> <select lay-verify="required" lay-search="" name="">
+                                <option value="">100001</option>
+                            </select></td>
+                        <td rowspan="2"><button class="layui-btn layui-btn-md layui-btn-radius ">检索</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>希望交货日期：</td>
+                        <td> <input type="text" class="layui-input" id="delivery" placeholder="yyyy年MM月dd日"></td>
+                    </tr>
+                </table>
+                <thead class="layui-table-header">
+                </thead>
+                <div style="margin: auto;width: 200px;text-align: center;">
+                    <h2>采购单商品明细</h2>
+                </div>
+                <div class="layui-table-box">
+                    <div class="layui-table-header">
+                        <table cellspacing="0" cellpadding="0" class="layui-table" style="text-align: center;"
+                            page=true>
+                            <thead>
+                                <tr>
+                                    <td style="width: 50px;">序号</td>
+                                    <td style="width: 120px;">商品编号</td>
+                                    <td style="width: 150px;">商品名称</td>
+                                    <td style="width: 60px;">单位</td>
+                                    <td style="width: 80px;">采购单价</td>
+                                    <td style="width: 80px;">采购数量</td>
+                                    <td style="width: 60px;">选择</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <form action="">
+                        <div class="layui-table-body layui-table-main" style="height: 120px;">
+                            <table cellspacing="0" cellpadding="0" class="layui-table" style="text-align: center;"
+                                page=true>
+                                <tbody style="overflow-y: scroll;">
+                                    <tr>
+                                        <td style="width: 50px;">1</td>
+                                        <td style="width: 120px;">10001</td>
+                                        <td style="width: 150px;">铅笔铅笔铅笔</td>
+                                        <td style="width: 60px;">打</td>
+                                        <td style="width: 80px;">1200</td>
+                                        <td style="width: 80px;">20</td>
+                                        <td style="width: 60px;"><input type="checkbox" name="" id=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50px;">1</td>
+                                        <td style="width: 120px;">10001</td>
+                                        <td style="width: 150px;">铅笔铅笔铅笔</td>
+                                        <td style="width: 60px;">打</td>
+                                        <td style="width: 80px;">1200</td>
+                                        <td style="width: 80px;">20</td>
+                                        <td style="width: 60px;"><input type="checkbox" name="" id=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50px;">1</td>
+                                        <td style="width: 120px;">10001</td>
+                                        <td style="width: 150px;">铅笔铅笔铅笔</td>
+                                        <td style="width: 60px;">打</td>
+                                        <td style="width: 80px;">1200</td>
+                                        <td style="width: 80px;">20</td>
+                                        <td style="width: 60px;"><input type="checkbox" name="" id=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50px;">1</td>
+                                        <td style="width: 120px;">10001</td>
+                                        <td style="width: 150px;">铅笔铅笔铅笔</td>
+                                        <td style="width: 60px;">打</td>
+                                        <td style="width: 80px;">1200</td>
+                                        <td style="width: 80px;">20</td>
+                                        <td style="width: 60px;"><input type="checkbox" name="" id=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50px;">1</td>
+                                        <td style="width: 120px;">10001</td>
+                                        <td style="width: 150px;">铅笔铅笔铅笔</td>
+                                        <td style="width: 60px;">打</td>
+                                        <td style="width: 80px;">1200</td>
+                                        <td style="width: 80px;">20</td>
+                                        <td style="width: 60px;"><input type="checkbox" name="" id=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50px;">1</td>
+                                        <td style="width: 120px;">10001</td>
+                                        <td style="width: 150px;">铅笔铅笔铅笔</td>
+                                        <td style="width: 60px;">打</td>
+                                        <td style="width: 80px;">1200</td>
+                                        <td style="width: 80px;">20</td>
+                                        <td style="width: 60px;"><input type="checkbox" name="" id=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50px;">1</td>
+                                        <td style="width: 120px;">10001</td>
+                                        <td style="width: 150px;">铅笔铅笔铅笔</td>
+                                        <td style="width: 60px;">打</td>
+                                        <td style="width: 80px;">1200</td>
+                                        <td style="width: 80px;">20</td>
+                                        <td style="width: 60px;"><input type="checkbox" name="" id=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50px;">1</td>
+                                        <td style="width: 120px;">10001</td>
+                                        <td style="width: 150px;">铅笔铅笔铅笔</td>
+                                        <td style="width: 60px;">打</td>
+                                        <td style="width: 80px;">1200</td>
+                                        <td style="width: 80px;">20</td>
+                                        <td style="width: 60px;"><input type="checkbox" name="" id=""></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="width: 300px;margin: 10px auto;">
+                            <span>
+                                <button style="float: left;" class="layui-btn " type=" reset"><i
+                                        class="layui-icon layui-icon-fonts-clear"></i>&nbsp;清空</button>
+                            </span>
+                            <span><button id="checkAllBox" style="float: right;" class="layui-btn " type="button"><i
+                                        class="layui-icon layui-icon-top "></i>&nbsp;发行</button></span>
+                        </div>
+                        <a style="display: none;" href="PR30102.html" id="changePage1">123</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
