@@ -1,12 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> 华信贩卖管理业务系统 </title>
+    <!-- 依 赖 样 式 -->
+    <link rel="stylesheet" href="../../component/pear/css/pear.css" />
+    <!-- 加 载 样 式 -->
+    <link rel="stylesheet" href="../../admin/css/loader.css" />
+    <!-- 布 局 样 式 -->
+    <link rel="stylesheet" href="../../admin/css/admin.css" />
+    <!-- index页样式 -->
+    <link rel="stylesheet" href="../../admin/css/yx/index.css">
 </head>
+
 <body>
-    <h1>Hello world</h1>
+
+    <div style="padding: 15px;">
+        <div class="layui-card layui-panel">
+            <div class="layui-card-header "
+                style="margin: 0px; padding:0px;background-image:url(../../admin/images/background.svg);">
+
+                <!-- <h1 id="title">欢 迎 进 入 华 信 采 购 系 统</h1> -->
+                <!-- <img src="admin/images/background.svg" alt="图片不见了" style="background-size: cover;"> -->
+
+                <div class="layui-carousel" id="test10" style="left:30%">
+                    <div carousel-item="" ">
+    									<div>
+    										<h1 id=" title"
+                        style=" font-style: normal; color: rgb(251, 251, 255); margin: 10px 200px; padding-top: 20px; position: absolute; z-index: 101;">
+                        欢 迎 进 入 <br>华 信 采 购 系 统</h1>
+                        <img src="../../admin\images\index1.jpg" alt="" style="position: absolute;z-index: 0;">
+                    </div>
+                    <div>
+                        <!-- <div background="admin/images/index1.jpg" style="background-size: cover"></div> -->
+                        <h1 id="title"
+                            style=" font-style: normal; color: rgb(251, 251, 255); margin: 10px 200px; padding-top: 20px; position: absolute; z-index: 101;">
+                            欢 迎 进 入 <br>华 信 采 购 系 统</h1>
+                        <img src="../../admin\images\index1.jpg" alt="" style="position: absolute;z-index: 0;">
+                    </div>
+                    <div>
+                        <!-- <div background="admin/images/index1.jpg" style="background-size: cover"></div> -->
+                        <h1 id="title"
+                            style=" font-style: normal; color: rgb(251, 251, 255); margin: 10px 200px; padding-top: 20px; position: absolute; z-index: 101;">
+                            欢 迎 进 入 <br>华 信 采 购 系 统</h1>
+                        <img src="../../admin\images\index1.jpg" alt="" style="position: absolute;z-index: 0;">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <a href="../../login.html" class="layui-btn layui-col-md5" id="quit_btn">安全退出</a>
+        </div>
+    </div>
+
+
+    <!-- 依 赖 脚 本 -->
+    <script src="../../component/layui/layui.js"></script>
+    <script src="../../component/pear/pear.js"></script>
+    <!-- 框 架 初 始 化 -->
+    <script>
+        layui.use(['admin', 'jquery', 'popup', 'drawer', 'carousel'], function () {
+            var $ = layui.jquery;
+            var admin = layui.admin;
+            var popup = layui.popup;
+            //轮播图
+            var carousel = layui.carousel
+            // var date = new Date();
+            // var year = date.getFullYear();
+            // var month = date.getMonth();
+
+            carousel.render({
+                elem: '#test10'
+                , width: '660px'
+                , height: '400px'
+                , interval: 4000
+            });
+
+
+            admin.setConfigType("yml");
+            admin.setConfigPath("config/pear.config.yml");
+
+            admin.render();
+
+            // 登出逻辑 
+            admin.logout(function () {
+                popup.success("注销成功", function () {
+                    location.href = "login.html";
+                })
+                // 注销逻辑 返回 true / false
+                return true;
+            })
+
+            // 消息点击回调
+            admin.message(function (id, title, context, form) { });
+        })
+    </script>
+
 </body>
+
 </html>
