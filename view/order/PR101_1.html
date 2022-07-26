@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>订单页面</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="../../component/layui/css/layui.css">
+    <link rel="stylesheet" href="../../component/pear/css/pear.css" />
+
+    <style>
+        /* 移动端 */
+        @media screen and (max-width: 768px) {
+
+            .layui-layout-admin .layui-layout-left,
+            .layui-layout-admin .layui-body,
+            .layui-layout-admin .layui-footer {
+                left: 0;
+            }
+
+            .layui-layout-admin .layui-side {
+                left: -300px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layui-main">
+        <!-- 内容主体区域 -->
+        <!--      <div class="layui-col-xs7 layui-col-sm7 layui-col-md7">-->
+        <div style="padding: 100px;">
+
+            <div class="layui-card layui-panel "
+                style="padding: 30px; background-image:url(admin/images/background.svg);">
+                <form action="PR101_2.html" method="GET">
+                    <div class="layui-form ">
+                        <div class="layui-form-item">
+                            <label>
+                                <h2> 订 单 输 入 </h2>
+                            </label>
+                        </div>
+                        <hr>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">顾客编号</label>
+                            <div class="layui-input-inline">
+                                <select name="custom_id" id="custom_id" lay-verify="required" lay-search>
+                                    <option value=""></option>
+                                    <option value="0">10001</option>
+                                    <option value="1">10002</option>
+                                    <option value="2">10003</option>
+                                    <option value="3">10004</option>
+                                    <option value="4">10005</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">希望交货日期</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" id="test-limit1" placeholder="yyyy-MM-dd"
+                                    readonly>
+                                <span id="tip-1"></span>
+                            </div>
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">交货地点</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="" id="" placeholder="省略时为现住址" class="layui-input">
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">商品编号</label>
+                            <div class="layui-input-inline">
+                                <select name="product_id" lay-verify="required">
+                                    <option value=""></option>
+                                    <option value="0">10001</option>
+                                    <option value="1">10002</option>
+                                    <option value="2">10003</option>
+                                    <option value="3">10004</option>
+                                    <option value="4">10005</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">销售数量</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input ">
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="layui-form-item">
+                            <button class="layui-btn layui-main" id="add-btn" type="button" lay-event="add">增加</button>
+                        </div>
+                        <div class="layui-bg-gray" style="padding: 30px;opacity: 0.8;">
+                            <div class="layui-row layui-col-space15">
+                                <div class="layui-col-md12">
+                                    <div class="layui-card" id="card">
+                                        <div class="layui-card-header">订单商品明细</div>
+                                        <div class="layui-card-body">
+                                            <!--商品表-->
+                                            <table class="layui-hide" id="test" lay-filter="test"></table>
+                                            <!-- 分页 -->
+                                            <div id="pageDemo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <input class="layui-btn layui-main" type="reset" />
+                        </div>
+
+                        <button class="layui-btn layui-main" type="submit">发行</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        Copyright &copy;2008 版权所有 大连华信计算机新技术培训中心
+    </div>
+
+
+
+    <script src="../../component/layui/layui.js" charset="utf-8"></script>
+    <script src="../../component/pear/pear.js"></script>
+    <script src="../../component/js/jquery-3.2.1.min.js"></script>
+    <script>
+
+        //订单商品明细
+        layui.use(['table', 'laydate', 'laypage'], function () {
+            //需要使用的内置组件
+            var laydate = layui.laydate; //日期
+            var table = layui.table; //表格
+            var laypage = layui.laypage; //分页
+
+
+            //执行一个laydate实例
+            var ins22 = laydate.render({
+                // elem: '#test1' ,//指定元素
+                elem: '#test-limit1'
+                , min: +1 //最低日期为第二天
+                , max: '2080-10-14'
+                , isInitValue: false
+                , ready: function () {
+                    ins22.hint('今日不可选 <br> 交货日期为次日'); //回调函数
+                }
+            });
+
+            //渲染表格
+            table.render({
+                elem: '#test',
+                url: '../../admin/data/product.json'
+                , page: {
+                    layout: ['prev', 'page', 'next', 'count', 'limit', 'refresh', 'skip']//自定义布局顺序 
+                    , limit: 2	//初始  每页几条数据
+                    , limits: [2, 4, 6, 8, 10]	//可以选择的 每页几条数据 
+                    , groups: 10 	//最多几个跳页按钮
+                    , first: false //不显示首页
+                    , last: false //不显示尾页
+                }
+                , cols: [
+                    [{
+                        type: 'checkbox',
+                        title: '选择'
+                    }
+                        // ,{field:'userId', fixed: 'left', width:80, title: 'ID', totalRowText: '合计：'}
+                        , {
+                        field: 'Id',
+                        width: 80,
+                        title: '序号',
+                        sort: true
+                    }, {
+                        field: 'pro_id',
+                        width: 100,
+                        title: '商品编号'
+                    }, {
+                        field: 'pro_name',
+                        title: '商品名',
+                        sort: true
+                    }, {
+                        field: 'pro_price',
+                        width: 100,
+                        title: '单价',
+                        sort: true
+                    }, {
+                        field: 'pro_unit',
+                        width: 100,
+                        title: '单位',
+                        // sort: true
+                    }, {
+                        field: 'pro_count',
+                        title: '在库数',
+                        sort: true
+                    }, {
+                        field: 'sell_count',
+                        title: '销售数量',
+                        sort: true
+                    }
+                    ]
+                ]
+            });
+        });
+    </script>
+
+</body>
+
+</html>

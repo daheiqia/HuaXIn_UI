@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>商品出库表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="../../component/layui/css/layui.css"
+        tppabs="http://res.layui.com/layui/dist/css/layui.css?t=1632428048355" media="all">
+    <style>
+        /* 移动端 */
+        @media screen and (max-width: 768px) {
+
+            .layui-layout-admin .layui-layout-left,
+            .layui-layout-admin .layui-body,
+            .layui-layout-admin .layui-footer {
+                left: 0;
+            }
+
+            .layui-layout-admin .layui-side {
+                left: -300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layui-main">
+        <!-- 内容主体区域 -->
+        <!--      <div class="layui-col-xs7 layui-col-sm7 layui-col-md7">-->
+        <div style="padding: 100px;">
+
+            <div class="layui-card layui-panel "
+                style="padding: 30px;background-image:url(../../admin/images/background.svg);">
+                <div class=" layui-form ">
+                    <div class=" layui-form-item">
+                        <label>
+                            <h2> 商 品 出 库 表 制 作</h2>
+                        </label>
+                    </div>
+                    <hr>
+                    <div class="layui-bg-gray" style="padding: 30px;">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-md12">
+                                <div class="layui-card">
+                                    <div class="layui-card-header">商品出库表</div>
+                                    <div class="layui-card-body">
+                                        <!--商品表-->
+                                        <table class="layui-hide" id="test"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部固定区域 -->
+    <div class="layui-footer">
+        Copyright &copy;2008 版权所有 大连华信计算机新技术培训中心
+    </div>
+
+    <script src="../../component/layui/layui.js" charset="utf-8"></script>
+    <script>
+        //订单商品明细
+        layui.use('table', function () {
+            var table = layui.table;
+
+            table.render({
+                elem: '#test'
+                , url: '../../admin/data/product.json'
+                , page: true
+                , cols: [
+                    [{
+                        field: 'pro_id',
+                        width: 100,
+                        title: '商品编号',
+                        sort: true
+                    }, {
+                        field: 'pro_name',
+                        title: '商品名',
+                    }, {
+                        field: 'bill_id',
+                        width: 100,
+                        title: '订单编号',
+                        sort: true
+                    }, {
+                        field: 'out_count',
+                        title: '出库数',
+                        sort: true
+                    }, {
+                        field: 'total_out_count',
+                        title: '合计出库数',
+                        sort: true
+                    }
+                    ]
+                ]
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
