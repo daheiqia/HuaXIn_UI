@@ -119,7 +119,7 @@
 				"icon": "layui-icon layui-icon-face-smile",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/home.html"
+				"href": "view/account/PR401.html"
 			},
 			{
 				"id": 402,
@@ -127,7 +127,7 @@
 				"icon": "layui-icon layui-icon-face-cry",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/home.html"
+				"href": "view/account/PR402.html"
 			},
 			{
 				"id": 403,
@@ -135,7 +135,7 @@
 				"icon": "layui-icon layui-icon-face-cry",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/home.html"
+				"href": "view/account/PR403.html"
 			}
 		]
 	},

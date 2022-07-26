@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="../../component/pear/css/pear.css" rel="stylesheet">
+	</head>
+	<body>
+		<div style="margin: 0 auto; max-width: 1140px;">
+			
+			<div class="layui-row">
+				<!--标题框-->
+			    
+			  <!--顶部导航栏-->
+			  
+			  <!--页面中心内容-->
+			  <div class="layui-row layui-col-space10">
+			  	<div class="layui-card" style="margin-top: 1px;">
+			  		<div class="layui-card-body layui-row">
+			  				
+			  			<div class="dd">供应商编号：</div>
+			  			<div class="layui-col-md12">
+			  				<input id="dd" type="text" name="" placeholder="请输入标题" autocomplete="off" class="layui-input" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+			  			</div>
+						
+						
+			  			<div class="layui-card">应付金额：</div>
+			  			<div class="layui-col-md12">
+			  				<input type="text" name="title" hover placeholder="用户名" autocomplete="off" class="layui-input" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+			  			</div>
+						
+						<div class="layui-col-md6">
+							<button type="button" class="layui-btn">清空</button>
+						</div>
+						<div class="layui-col-md6">
+							<button type="button" class="layui-btn" onclick="shot()">发行</button>
+						</div>
+						
+			  		</div>
+			  	</div>
+			  </div>
+			  
+			  
+			  
+		</div>
+		
+		<script src="component/layui/layui.js"></script>
+		
+		<script>
+			function shot(){
+				if(!document.getElementById('dd').value)
+				{
+					alert("供应商编号不能为空");
+				}
+				else{
+					if(document.getElementById('dd').value.length<5){
+						alert("长度不能小于5");
+					}
+				}
+				
+			}
+			
+			
+		</script>
+	</body>
+</html>
